@@ -1,0 +1,16 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int x,k,j;
+    scanf("%d", &x);
+    k = x / 1000;
+    j = x % 10;
+    printf("%d\n", k + j);
+    return 0;
+}
