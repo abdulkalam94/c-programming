@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+int main() {
+    int a,l,b,r,h,b1;
+    scanf("%d",&a);
+    scanf("%d",&l);
+    scanf("%d",&b);
+      scanf("%d",&r);
+    scanf("%d",&b1);
+    scanf("%d",&h);
+    float pi=3.14159235659;
+    int sq,rec,tri;
+    float cir;
+    sq=a*a;
+    rec=l*b;
+    cir=(pi*r*r*100.0)/100.0;
+    tri=0.5*b1*h;
+    
+    
+    printf("Area of Square=%d\n",sq);
+    printf("Area of Rectangle=%d\n",rec);
+    printf("Area of Circle=%.2f\n", cir);
+    printf("Area of Triangle=%d\n", tri);
+    
+    return 0;
+}
