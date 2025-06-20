@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <limits.h>
+
+void sortDesc(int arr[], int n) {
+    for (int i = 0; i < n-1; i++)
+        for (int j = i+1; j < n; j++)
+            if (arr[i] < arr[j]) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+}
+
+void sortAsc(int arr[], int n) {
+    for (int i = 0; i < n-1; i++)
+        for (int j = i+1; j < n; j++)
+            if (arr[i] > arr[j]) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    int arr[100], even[100], odd[100];
+    int evenCount = 0, oddCount = 0;
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+
+        if (i % 2 == 0)
+            even[evenCount++] = arr[i];
+        else
+            odd[oddCount++] = arr[i];
+    }
+
+    sortDesc(even, evenCount);
+    
+    sortAsc(odd, oddCount);
+
+    if (evenCount < 2 || oddCount < 2) {
+        printf("Not enough elements to find second largest/smallest.\n");
+        return 0;
+    }
+
+    int secondLargestEven = even[1];
+    int secondSmallestOdd = odd[1];
+    int sum = secondLargestEven + secondSmallestOdd;
+
+    printf("Sum=%d\n", sum);
+
+    return 0;
+}
