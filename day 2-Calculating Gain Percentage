@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    float A, B, C;
+    scanf("%f", &A); 
+    scanf("%f", &B); 
+    scanf("%f", &C); 
+
+    float cost_price = A + B;
+    float gain = C - cost_price;
+
+    float gain_percent = (gain / cost_price) * 100;
+    printf("%.2f\n", gain_percent);
+
+    return 0;
+}
