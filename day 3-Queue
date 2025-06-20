@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+
+    int a[n];
+    for (int i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    int buses = 1;         
+    int currentLoad = 0;   
+
+    for (int i = 0; i < n; i++) {
+        if (currentLoad + a[i] <= m) {
+            currentLoad += a[i]; 
+        } else {
+            buses++;           
+            currentLoad = a[i];  
+        }
+    }
+
+    printf("%d\n", buses);
+    return 0;
+}
