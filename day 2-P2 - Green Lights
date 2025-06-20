@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    float speed, distance, time_light;
+
+    scanf("%f", &speed);
+    scanf("%f", &distance);
+    scanf("%f", &time_light);
+    float time_to_reach = (distance / speed) * 3600;
+    if (time_to_reach < time_light) {
+        printf("Yes\n");
+    } else {
+        printf("No\n");
+    }
+
+    return 0;
+}
