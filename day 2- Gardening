@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int r, c, t;
+    scanf("%d%d%d", &r, &c, &t);
+   int total = r * c;
+ if (t < 1 || t > total) {
+        printf("Invalid tree number\n");
+        return 0;
+    }
+
+    int col = (t - 1) / r + 1;  
+
+    if (col == 2 || col == c - 1)
+        printf("It is a mango tree\n");
+    else
+        printf("It is not a mango tree\n");
+
+    return 0;
+}
