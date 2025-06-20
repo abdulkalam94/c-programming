@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char name[50];
+    int backlogs;
+    float percentage;
+    scanf("%s", name);           
+    scanf("%d", &backlogs);      
+    scanf("%f", &percentage);   
+    printf("Name of the Student:%s\n", name);
+    if (backlogs <= 1 && percentage >= 60) {
+        printf("%s is Eligible for Placement\n", name);
+    } else {
+        printf("%s is Not Eligible for Placement\n", name);
+    }
+
+    return 0;
+}
