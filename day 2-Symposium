@@ -1,0 +1,71 @@
+#include <stdio.h>
+
+int main() {
+    int dept;
+    char event;
+
+    printf("Welcome to AsInTra\n");
+    printf("1.CSE\n2.ECE\n3.MECH\n4.CIVIL\n");
+    printf("Enter Department\n");
+    scanf("%d", &dept);
+
+    switch(dept) {
+        case 1:
+            printf("Go Straight\n");
+            printf("Welcome to CSE Department\n");
+            printf("a.Coding\nb.Web Designing\nc.Database\n");
+            break;
+        case 2:
+            printf("Turn Right\n");
+            printf("Welcome to ECE Department\n");
+            printf("a.Circuit Debugging\nb.Embedded\nc.Communication\n");
+            break;
+        case 3:
+            printf("Turn Left\n");
+            printf("Welcome to MECH Department\n");
+            printf("a.CAD Modeling\nb.Engine Assembly\nc.Thermal Quiz\n");
+            break;
+        case 4:
+            printf("Climb Upstairs\n");
+            printf("Welcome to CIVIL Department\n");
+            printf("a.Surveying\nb.Building Design\nc.Structural Quiz\n");
+            break;
+        default:
+            printf("Invalid Department\n");
+            return 0;
+    }
+
+    printf("Enter Event\n");
+    scanf(" %c", &event);  
+    if (dept == 1) { 
+        switch(event) {
+            case 'a': printf("Go to hall S108\n"); break;
+            case 'b': printf("Go to hall S109\n"); break;
+            case 'c': printf("Go to hall S110\n"); break;
+            default: printf("Invalid Event\n");
+        }
+    } else if (dept == 2) { 
+        switch(event) {
+            case 'a': printf("Go to hall E201\n"); break;
+            case 'b': printf("Go to hall E202\n"); break;
+            case 'c': printf("Go to hall E203\n"); break;
+            default: printf("Invalid Event\n");
+        }
+    } else if (dept == 3) { 
+        switch(event) {
+            case 'a': printf("Go to hall M301\n"); break;
+            case 'b': printf("Go to hall M302\n"); break;
+            case 'c': printf("Go to hall M303\n"); break;
+            default: printf("Invalid Event\n");
+        }
+    } else if (dept == 4) { 
+        switch(event) {
+            case 'a': printf("Go to hall C401\n"); break;
+            case 'b': printf("Go to hall C402\n"); break;
+            case 'c': printf("Go to hall C403\n"); break;
+            default: printf("Invalid Event\n");
+        }
+    }
+
+    return 0;
+}
