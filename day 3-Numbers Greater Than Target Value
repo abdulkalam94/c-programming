@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int n, target, i;
+    int arr[100]; 
+    int sum = 0, count = 0;
+
+    scanf("%d", &n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    scanf("%d", &target);
+    printf("The Target values are ");
+    for (i = 0; i < n; i++) {
+        if (arr[i] > target) {
+            printf("%d ", arr[i]);
+            sum += arr[i];
+            count++;
+        }
+    }
+
+    printf("\n");
+    if (count > 0) {
+        float average = (float)sum / count;
+        printf("sum of value is %d\n", sum);
+        printf("Average of the value is %.1f\n", average);
+    } else {
+        printf("No values found greater than the target.\n");
+    }
+
+    return 0;
+}
